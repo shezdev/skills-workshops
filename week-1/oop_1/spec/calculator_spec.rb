@@ -1,9 +1,9 @@
 require 'calculator'
 
-describe Calculation do
+describe Calculation do # Describe the class
   describe '#add' do
     it 'adds two numbers' do
-      expect(subject.add(2, 3)).to eq 5
+      expect(subject.add(2, 3)).to eq 5 # subject points to an instantiated object of the class
       expect(subject.add(6, 4)).to eq 10
       expect(subject.add(0, 0)).to eq 0
       expect(subject.add(-1, -1)).to eq -2
