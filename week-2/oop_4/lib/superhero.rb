@@ -1,19 +1,23 @@
-class Superhero
-  def initialize(name, power)
-    @name = name
-    @power = power
-  end
+require_relative "fighting.rb"
+require_relative "villain"
+require_relative "start.rb"
 
-  def use_power
-    p "#{ @name } is now #{ @power }!"
-  end
+class Superhero
+  include Start
+  include Fighting
+
 end
 
-flash = Superhero.new("The Flash", "running real fast")
-flash.use_power # => "The Flash is now running real fast!"
+# INTERFACE
+pikachu = Superhero.new("Pikachu", "real cute :3")
+pikachu.use_power # => "Pikachu is real cute :3"
 
-santa = Superhero.new("Santa Claus", "running real fast")
-santa.use_power # => "Santa Claus is now running real fast!"
+thor = Superhero.new("Thor", "swingin' Mjolnir")
+thor.use_power # => "Thor is swingin' Mjolnir"
 
-batman = Superhero.new("Batman", "wealthy and sad :(")
-batman.use_power # => "Batman is now wealthy and sad :(!"
+the_shoveler = Superhero.new("The Shoveler", "shovelling faster than any man")
+the_shoveler.use_power # => "The Shoveler is shovelling faster than any man"
+
+the_joker = Villain.new("The Joker", "creepy")
+thor.fight the_joker
+the_joker.fight thor
