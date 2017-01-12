@@ -8,4 +8,5 @@ module Start
   def use_power
     p "#{ @name } is #{ @power }"
   end
+  
 end
