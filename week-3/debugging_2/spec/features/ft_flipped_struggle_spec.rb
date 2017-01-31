@@ -11,6 +11,7 @@ feature "table flip a struggle" do
     fill_in :struggle, with: "Programming"
 
     click_button "Flip table"
+    save_and_open_page
     expect(page).to have_content "(Programming!!!)> (╯°□°）╯︵ ┻━┻"
   end
 end

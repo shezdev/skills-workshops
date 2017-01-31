@@ -4,7 +4,8 @@ require 'delegate'
 
 # Understands how to present a random, happy emoji
 class RandomHappyEmoji < SimpleDelegator
-  HAPPY_EMOJI = [":D"]
+  #  HAPPY_EMOJI = [":D"] # change from :D to :)
+  HAPPY_EMOJI = [":)"]
 
   def initialize
   	p HAPPY_EMOJI.sample
